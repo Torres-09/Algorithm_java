@@ -34,13 +34,18 @@ public class StringTest {
         System.out.println(str4);
         System.out.println(str.toLowerCase());
         System.out.println(str.toUpperCase(Locale.ROOT));
-
+        str.toUpperCase();
+        System.out.println("str = " + str);
         // 같으면 0 , 앞이면 -1 , 뒤면 1 , 길이가 다르면 길이차이 return
         System.out.println(str.compareTo("abc"));
         int a = Integer.parseInt("300");
         System.out.println("a = " + a);
         String Int = Integer.toString(a);
         System.out.println("Int = " + Int);
+        List<Integer> list1 = new ArrayList();
+        list1.stream().sorted().mapToInt(i -> i).toArray();
+        str.toLowerCase();
+
     }
 
     public static void main(String[] args) {

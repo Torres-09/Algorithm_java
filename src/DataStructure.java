@@ -27,12 +27,20 @@ public class DataStructure {
         System.out.println("pq = " + pq);
 
         int numbers[] = {1,2};
-        Arrays.sort(numbers);
-        Arrays.sort(new int[][]{numbers},Collections.reverseOrder());
-        Integer []number = Arrays.stream(numbers).boxed().toArray(Integer[]::new);
-        Arrays.sort(number, Collections.reverseOrder());
-        Double num = 3.14;
+        Arrays.stream(numbers).map(i -> i *= 2).toArray();
+        Map.Entry<Integer,Integer> entry;
+
+        String my_string = "aAb1B2cC34oOp";
+        int answer =0;
+        for(int i =0;i<my_string.length();i++)
+        {
+            if(my_string.charAt(i) <= '9' && my_string.charAt(i) >= '1')
+                answer += Character.getNumericValue(my_string.charAt(i));
+        }
+        System.out.println("answer = " + answer);
+        StringBuilder sb = new StringBuilder();
         
+
     }
 
     public static void main(String[] args) {
