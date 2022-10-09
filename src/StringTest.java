@@ -46,6 +46,19 @@ public class StringTest {
         list1.stream().sorted().mapToInt(i -> i).toArray();
         str.toLowerCase();
 
+        String my_string = "asDSs";
+        List<Character> list4 = new ArrayList();
+        for(int i =0;i<my_string.length();i++)
+        {
+            list4.add(my_string.toLowerCase().charAt(i));
+        }
+        Collections.sort(list4);
+
+        System.out.println(list4.toString());
+        char strc[] = str.toCharArray();
+        System.out.println(strc[0]);
+
+        str.replace("abc","");
     }
 
     public static void main(String[] args) {
