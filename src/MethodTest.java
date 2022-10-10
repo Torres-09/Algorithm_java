@@ -20,8 +20,20 @@ public class MethodTest {
             }
 
             String[] answer = list.toArray(new String[list.size()]);
+            String[] morse = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+            String letter = "";
+            String[] strings = letter.split(" ");
+            for (String i : strings) {
+                for(int j =0;j<morse.length;j++){
+                    if(i.equals(morse[j]))
+                        i.replace(i,String.valueOf('a'+j));
+            }
+        }
+
             return answer;
         }
+
+
     }
     public static void solution() {
         Scanner scanner = new Scanner(System.in);
